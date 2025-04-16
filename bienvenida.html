@@ -74,13 +74,45 @@
             <img src="https://www.dcode.fr/tools/gravity-falls-bill/images/char(65).png" alt="char(65)">
 
             <p>---------------------------------------------------------------------</p>
-            
+
+
+            <p>Acertijo(endevinalla)= El numero del dia de tu cumpleaños es crucial para resolver esta encrucijada, pues en el octavo puesto se alla la pista para descifrar que simbolos son estos</p>
+
+            <!--formulario-->
+            <div class="form-group">
+                    <label for="respuesta">Introduce la respuesta:</label>
+                    <input type="text" id="respuesta" name="respuesta" placeholder="Escribe aquí tu respuesta">
+                    <button type="button" onclick="verificarRespuesta()">Comprobar</button>
+                    <div id="mensajeError" class="error-message"></div>
+                </div>
+
+
+            <p>---------------------------------------------------------------------</p>
+
 
             
             <h3>Decoder(por si no quierees comerte la cabeza)(pero no lo utilizes i have a minigame for you)</h3>
-<div ><span>⮞ Go to:</span> <a href="https://www.dcode.fr/gravity-falls-bill-cipher">DecoderWeb</a></div>
+<div ><span>⮞ Go to:</span> <a href="https://www.dcode.fr/gravity-falls-bill-cipher" target="_blank" >DecoderWeb</a></div>
 </form>
         </div>
+
+            
     </div>
+
+                <script>
+        function verificarRespuesta() {
+            const respuesta = document.getElementById('respuesta').value.toLowerCase();
+            const mensajeError = document.getElementById('mensajeError');
+            
+            if (respuesta === 'candy') {
+                // Respuesta correcta: abre nueva pestaña
+                window.open('abecedarioGF.html', '_blank');
+                mensajeError.textContent = '';
+            } else {
+                // Respuesta incorrecta
+                mensajeError.textContent = 'Respuesta incorrecta. ¡Sigue intentándolo!';
+            }
+        }
+    </script>
 </body>
 </html>
