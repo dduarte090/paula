@@ -1,134 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenida Romana Ave cesar</title>
-     <style>
-        /* Estilos base para todos los dispositivos */
+    <title>Mensaje Especial</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            box-sizing: border-box;
-        }
-        
-        .welcome-container {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
             text-align: center;
         }
         
-        h2 {
+        .message-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
             margin-bottom: 20px;
+        }
+        
+        .love-message {
+            font-size: 18px;
             color: pink;
-            font-size: 24px;
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        .welcome-content {
-            text-align: left;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 4px;
-            color: #555;
+            margin-bottom: 20px;
             line-height: 1.6;
-            font-size: 16px;
         }
         
-        .welcome-footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
+        .recommendation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
         }
         
-        .form-group {
-            margin: 15px 0;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
+        .song-title {
             font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #222;
         }
         
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-        
-        .form-group button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 12px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-            width: 100%;
-            font-size: 16px;
-        }
-        
-        .error-message {
-            color: red;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        
-        .external-link {
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        
-        .external-link a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        
-        .external-link a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Queries optimizadas para móviles */
-        @media only screen and (max-width: 600px) {
-            body {
-                padding: 10px;
-                align-items: flex-start;
-                min-height: auto;
-                height: auto;
-            }
-            
-            .welcome-container {
-                padding: 20px 15px;
-                margin: 20px 0;
-            }
-
-            /* Contenedor del video centrado y responsive */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            margin: 80px; /* Centrado horizontal */
-            max-width: 560px; /* Ancho máximo del video */
+            max-width: 560px;
             width: 100%;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .video-container iframe {
@@ -139,57 +68,21 @@
             height: 100%;
             border: none;
         }
-            
-            h2 {
-                font-size: 22px;
-                margin-bottom: 15px;
-                colror:pink;
-            }
-            
-            .welcome-content {
-                padding: 12px;
-                font-size: 15px;
-            }
-            
-            .form-group input,
-            .form-group button {
-                padding: 12px;
-            }
-            
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-
-        /* Ajustes para pantallas muy pequeñas */
-        @media only screen and (max-width: 400px) {
-            h2 {
-                font-size: 20px;
-                color: pink;
-            }
-            
-            .welcome-content {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="welcome-container">
-        <h2>Te quiero muchissimo mi amor, recomendacion personal ponlo desde el segundo 28</h2>
-      <div class="welcome-content">
-            
-            <!-- Contenedor del video de YouTube centrado -->
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/UsR08cY8k0A" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-            </div>
-      </div>
+    <div class="message-container">
+        <p class="love-message">Te quiero muchísimo mi amor</p>
+        <p class="recommendation">Recomendación personal: ponlo desde el segundo 28</p>
+        <p class="song-title">JVKE - golden hour</p>
+        
+        <div class="video-container">
+            <!-- Video configurado para empezar en el segundo 28 -->
+            <iframe src="https://www.youtube.com/embed/UsR08cY8k0A?start=28" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
     </div>
 </body>
 </html>
-
