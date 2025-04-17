@@ -214,31 +214,7 @@
             
     </div>
 
-               <script>
-       // Función para detectar si es un dispositivo móvil
-    function esDispositivoMovil() {
-        return (typeof window.orientation !== "undefined") || 
-               (navigator.userAgent.indexOf('IEMobile') !== -1) ||
-               (window.innerWidth <= 800);
-    }
-
-    // Solo aplicar protección si NO es un dispositivo móvil
-    if (!esDispositivoMovil()) {
-        // Prevención contra clic derecho
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-        
-        // Prevención contra apertura de DevTools
-        document.onkeydown = function(e) {
-            if (e.key === 'F12' || 
-                (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-                (e.ctrlKey && e.key === 'U')) {
-                return false;
-            }
-        };
-
+              <script>
         function verificarRespuesta() {
             const respuesta = document.getElementById('respuesta').value.toLowerCase();
             const mensajeError = document.getElementById('mensajeError');
